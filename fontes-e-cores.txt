@@ -1,0 +1,12 @@
+FONTES:
+
+H1/Headings = Berkshire Swash - fontfamily: 'Berkshire Swash';
+
+Body = Montserrat - font-family: 'Montserrat', sans-serif;
+
+
+CORES:
+
+Vermelho: #aa0000ff
+
+Amarelo: #ffcc00ff
