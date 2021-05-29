@@ -1,0 +1,293 @@
+html,
+body {
+  font-family: "Montserrat", sans-serif;
+  color: rgb(228, 228, 228);
+  font-size: 23px;
+  background-image: url(img/background.jpg);
+  background-size: contain;
+  background-position: center;
+  min-height: 100vh;
+  height: 100vh;
+  width: 100vw;
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+/* Header */
+header {
+  color: white;
+  top: 0;
+  text-align: center;
+  text-shadow: 0 0 5px black;
+  font-size: 25px;
+}
+
+span.hanoi {
+  font-family: "Berkshire Swash";
+  color: #aa0000ff;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #ffcc00ff;
+  font-size: 75px;
+  display: block;
+  transform: translateY(-30px);
+}
+
+/* Section regras */
+section.regras-content {
+  position: absolute;
+  margin-top: 200px;
+  width: 90%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+div.regras {
+  background-color: rgba(0, 0, 0, 0.507);
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+ol.ol-regras {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+li {
+  width: 30%;
+}
+
+li:nth-child(-n + 2) {
+  border-right: 1px solid white;
+}
+
+p {
+  margin-top: 40px;
+  font-weight: bold;
+  font-style: italic;
+  text-align: center;
+  font-size: 26px;
+}
+
+button {
+  margin-top: 20px;
+  padding: 15px 50px;
+  font-size: large;
+  letter-spacing: 7px;
+  font-weight: bolder;
+  color: #aa0000ff;
+  background-color: #ffcc00ff;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  margin-bottom: 60px;
+  transition-duration: 200ms;
+}
+
+button:hover {
+  color: #ffcc00ff;
+  background-color: #aa0000ff;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+  transition-duration: 500ms;
+}
+
+.ux {
+  position: absolute;
+  background-color: #aa0000ff;
+  top: 340px;
+  left: 300px;
+  color: #ffcc00ff;
+  font-size: 13px;
+  padding: 5px 7px;
+  letter-spacing: 2px;
+}
+
+.ux2 {
+  position: absolute;
+  background-color: #aa0000ff;
+  top: 35%;
+  right: 26%;
+  color: #ffcc00ff;
+  font-size: 13px;
+  padding: 5px 7px;
+  letter-spacing: 2px;
+}
+
+.regras-button {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  padding: 10px 20px;
+  font-size: 14px;
+  letter-spacing: 2px;
+  font-weight: bolder;
+  color: #ffcc00ff;
+  background-color: #aa0000ff;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  transition-duration: 200ms;
+}
+
+/* JOGO---------------------------------------------------- */
+section#game {
+  margin-top: -40px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  display: none;
+}
+
+div.torre {
+  display: flex;
+  align-items: center;
+  flex-direction: column-reverse;
+  width: 350px;
+  height: 400px;
+  position: relative;
+  z-index: 2;
+}
+
+div.torre:hover {
+  cursor: pointer;
+}
+
+#start,
+#offset,
+#end {
+  width: 5%;
+  background-color: white;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.discoUp {
+  position: absolute;
+  top: -100px;
+}
+
+.disc {
+  border-radius: 10px;
+}
+
+.container_alert {
+  background-color: #fefefe;
+  margin: 2% auto;
+  padding: 20px;
+  color: rgba(0, 0, 0, 0.637);
+  width: 50%;
+  position: fixed;
+  z-index: 3;
+}
+
+.container_alert span {
+  color: rgba(0, 0, 0, 0.637);
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.headings {
+  position: absolute;
+  top: 0;
+  width: 40px;
+  font-size: 12px;
+  color: black;
+}
+
+.vitoria {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.952);
+  z-index: 3;
+}
+
+.vitoria span {
+  font-family: "Berkshire Swash";
+  color: #aa0000ff;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #ffcc00ff;
+  font-size: 80px;
+}
+
+/* Responsividade aqui ------------------------------------------------------------------*/
+@media only screen and (max-width: 1000px) {
+  ol.ol-regras {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 40px;
+  }
+
+  li {
+    width: 90%;
+    margin: 20px 0;
+  }
+
+  li:nth-child(-n + 2) {
+    border: none;
+  }
+  div.torre {
+    height: 50%;
+    min-height: 200px;
+  }
+
+  header {
+    text-align: left;
+    left: 0;
+    margin-right: auto;
+    margin-left: 50px;
+    transform: scale(0.8);
+  }
+
+  .ux {
+    left: 10%;
+  }
+
+  .regras-button {
+    transform: scale(0.8);
+    top: 50px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  body {
+    font-size: 16px;
+  }
+
+  p {
+    font-size: 18px;
+  }
+
+  button {
+    font-size: small;
+  }
+
+  header {
+    font-size: 20px;
+  }
+
+  span.hanoi {
+    font-size: 60px;
+  }
+}

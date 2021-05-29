@@ -2,15 +2,38 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=], initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="javascript" type="text/javascript" href="script.js">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Montserrat&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+
+    <header>
+        <h1>Torre de 
+            <br>
+            <span class="hanoi">Hanoi</span>
+        </h1>
+    </header>
+
+    <section class="regras-content">
+        <article>
+            <div id="regras" class="regras">
+                <ol class="ol-regras">
+                    <li>Neste jogo você pode mover apenas 1 disco por vez.</li>
+                    <li>Cada movimento consiste de pegar o disco de cima de uma das pilhas e movê-lo para o topo de outra pilha.</li>
+                    <li>Nenhum disco pode ser colocado no topo de um disco menor.</li>
+                </ol>
+                <p>O objetivo final é colocar todos os discos na última torre.</p>
+                <button id="regras-button">PLAY GAME</button>
+            </div>
+        </article>
+    </section>
+
+    <audio id="audio1" src="soundtrack/discup.mp3"></audio>
+    <audio id="audio2" src="soundtrack/discdown.mp3"></audio>
+    <script src="script.js"></script>
 </body>
 </html>
